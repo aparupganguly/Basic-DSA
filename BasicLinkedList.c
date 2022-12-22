@@ -7,6 +7,16 @@ struct Node
     struct Node *next;
 };
 
+void linkedListTraversal(struct Node *ptr)
+{
+    while (ptr != NULL)
+    {
+
+        printf("Head Data Of the Linked List is : %d\n", ptr->data);
+        ptr = ptr->next;
+    }
+}
+
 int main()
 {
     struct Node *head;
@@ -26,8 +36,7 @@ int main()
 
     third->data = 2;
     third->next = NULL;
-
-    printf("Head Data Of the Linked List is : %d\n", head->data);
+    linkedListTraversal(head);
 
     return 0;
 }
